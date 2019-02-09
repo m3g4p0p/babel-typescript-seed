@@ -1,0 +1,29 @@
+{
+  "name": "tbabe",
+  "version": "1.0.0",
+  "main": "lib/index.js",
+  "license": "MIT",
+  "scripts": {
+    "test": "jest",
+    "test:watch": "npm run test -- --watchAll",
+    "lint": "tslint -p tsconfig.typecheck.json",
+    "check": "tsc -p tsconfig.typecheck.json",
+    "build:types": "tsc -p tsconfig.declarations.json",
+    "build:js": "babel src --out-dir lib --extensions \".ts,.tsx\" --source-maps inline",
+    "build:js:watch": "npm run build:js -- --watch",
+    "build": "npm run lint && npm run test && npm run build:js -- --delete-dir-on-start && npm run build:types",
+    "prepublish": "npm run build"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.2.2",
+    "@babel/plugin-proposal-class-properties": "^7.3.0",
+    "@babel/plugin-proposal-object-rest-spread": "^7.3.2",
+    "@babel/preset-env": "^7.3.1",
+    "@babel/preset-typescript": "^7.1.0",
+    "@types/jest": "^24.0.0",
+    "jest": "^24.1.0",
+    "tslint": "^5.12.1",
+    "typescript": "^3.3.3"
+  }
+}
