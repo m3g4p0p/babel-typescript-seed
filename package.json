@@ -1,8 +1,15 @@
 {
-  "name": "tbabe",
-  "version": "1.0.0",
+  "name": "babel-typescript-seed",
+  "version": "0.0.0",
   "main": "lib/index.js",
   "license": "MIT",
+  "author": {
+    "name": "m3g4p0p"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/m3g4p0p/babel-typescript-seed"
+  },
   "scripts": {
     "test": "jest",
     "test:watch": "npm run test -- --watchAll",
