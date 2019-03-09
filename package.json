@@ -16,9 +16,9 @@
     "lint": "tslint -p tsconfig.verify.json",
     "check": "tsc -p tsconfig.verify.json",
     "build:types": "tsc -p tsconfig.emit.json",
-    "build:js": "babel src --out-dir lib --extensions \".ts,.tsx\" --source-maps inline",
+    "build:js": "babel src --out-dir lib --extensions \".ts,.tsx\" --delete-dir-on-start",
     "build:watch": "npm run build:js -- --watch",
-    "build": "npm run lint && npm run test && npm run build:js -- --delete-dir-on-start && npm run build:types",
+    "build": "npm run lint && npm run test && npm run build:js && npm run build:types",
     "prepublish": "npm run build"
   },
   "pre-commit": ["lint", "check", "test"],
