@@ -11,15 +11,15 @@
     "url": "https://github.com/m3g4p0p/babel-typescript-seed"
   },
   "scripts": {
-    "test": "jest",
-    "test:watch": "npm run test -- --watchAll",
-    "lint": "tslint -p tsconfig.verify.json",
     "check": "tsc -p tsconfig.verify.json",
-    "build:types": "tsc -p tsconfig.emit.json",
-    "build:js": "babel src --out-dir lib --extensions \".ts,.tsx\" --delete-dir-on-start",
-    "build:watch": "npm run build:js -- --watch",
+    "lint": "tslint -p tsconfig.verify.json",
     "build": "npm run lint && npm run test && npm run build:js && npm run build:types",
-    "prepublish": "npm run build"
+    "build:js": "babel src --out-dir lib --extensions \".ts,.tsx\" --delete-dir-on-start",
+    "build:types": "tsc -p tsconfig.emit.json",
+    "build:watch": "npm run build:js -- --watch",
+    "prepublish": "npm run build",
+    "test:watch": "npm run test -- --watchAll",
+    "test": "jest"
   },
   "pre-commit": [
     "lint",
