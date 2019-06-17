@@ -1,13 +1,6 @@
 {
+  "extends": "./tsconfig.json",
   "compilerOptions": {
-    "target": "esnext",
-    "module": "commonjs",
-    "noEmit": true,
-    "strict": true,
-    "allowSyntheticDefaultImports": true,
-    "esModuleInterop": true,
-    "pretty": true
-  },
-  "include": ["src", "test"],
-  "exclude": ["node_modules"]
+    "noEmit": true
+  }
 }
